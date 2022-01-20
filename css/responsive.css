@@ -1,0 +1,709 @@
+/* (공통 기본 pc버전 1920px) 놋북,태블릿 사이즈, 최대 1280px 화소까지 적용 */
+@media only screen and (max-width:1280px) {
+    
+body { font-size:0.8em }
+.wrap { width: 100%; padding: 0 24px }
+    
+/* 헤더 부분 */    
+#header.down { height:320px }
+#header .gnb .depth1 {padding:0 22px; }
+#telnum {right: 3%} 
+#header .user .user_menu {right: 8.6%}
+#header .util .search {right: 12.5%}
+#header .util .e_btn {right: 2.5%}
+#header .user .logIn, .logOut, .signUp, .myPage, .admin {width: 70px;right: 70px}
+
+/* 컨트롤 페이징 부분 */
+.pic_lt .ts-controls { display: none;text-align:center; }
+.pic_lt .ts-controls button { display:none }
+.pic_lt .ts-controls button.ts-paging-btn { display:inline-block; margin:0 3px; position:static; width:100%; background:none; width:20px; height:20px; border:1px solid #333; border-radius:50% }
+.pic_lt .ts-controls button.ts-paging-btn.ts-paging-active { background:#333 }
+    
+/* 메인페이지 컨텐츠 부분 */
+#main_visual .roll { padding: 0 30px }   
+#main_visual .roll .roll_wrap { margin: 32vh auto }
+#main_visual .roll04 { background:url(../img/visual04_respon.png) no-repeat top;background-size: cover;/*text-shadow: 2px 2px 1px white;*/ }  
+#main_visual .slider h2 { font-size: 2.8em }
+.main_about, .main_bbs { padding: 50px 0 }
+.main_about .img { width:50% }
+.main_about .text { width:45% }
+
+/* 서브페이지 부분 */
+#contents { margin:50px 0 0 0 }
+.content_wrap .tab_menu.tab01 { background-size: cover }
+
+.history_list { padding:0 4% }
+.tbl_head01 td, .tbl_head01 th { padding:14px 8px !important }
+#bo_list .td_num2 { width:60px; }
+.td_thumb { width:150px }
+#bo_list .td_datetime { width:80px }
+#bo_gall .gall_info .gall_view { display:none }
+#faq_sch .frm_input, #faq_sch .btn_submit { height:40px }
+#bo_v iframe { width: 100%; height:43vw }
+#sch_res_detail select, #sch_res_detail select { width:120px }
+#sch_res_detail .sch_wr { width:calc(100% - 380px) }
+#rightQuick { display:none }
+    
+/* 개인정보처리방침 서비스 이용약관 공통*/
+#ctt_con div.pv_tt{width:25%;font-size:1.3rem;font-weight:500;text-align:center;margin:0px 37.5% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /* 타이틀 */
+    
+ /*서비스 이용약관*/
+#ctt_con div.pv_tt_2{width:80%;font-size:1.3rem;font-weight:500;text-align:center;margin:0px 10% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /*타이틀*/   
+    
+}
+
+/*==================================================================================================================================================================================*/
+
+/* (공통 기본 pc버전 1920px) 태블릿(기준: 아이패드) 가로 버전 사이즈, 최대 1024px 화소까지 적용 */
+@media only screen and (max-width: 1024px) {
+    
+/* 헤더 부분 */ 
+/*#header .gnb .depth1 { padding: 0 30px }
+#header .util .search { right: 15% }
+#header .user .user_menu { right: 10% }*/
+    
+/* pc버전 display:none / 태블릿&모바일버전 display:block */ 
+.pc_only { display:none !important }
+.mobile_no { display:none !important }
+.mobile_only { display:block !important }
+    
+/* 헤더 */    
+#header { height:70px !important }
+#header .m_util_wrap {width: 100%;height: 70px;line-height: 2em}
+#header .btn_gnb { position:absolute; top:20px; right: 30px; font-size:22px; z-index:10; }
+#header .btn_gnb.on { color:#fff; transform:rotate(-90deg) }    
+#header.on .btn_gnb.on {color: rgba(0,0,0,0.7);}
+#header .btn_user { position:absolute; right:70px; top:20px; font-size:22px; z-index:10; float:none; margin:0 }
+#header .btn_search { position:absolute; right:110px; top:20px; font-size:22px; z-index:10; float:none; margin:0 }
+   
+#header .e_btn {position: absolute; top: 20px;right: 150px;width: 28px;height: 28px; z-index:10; float:none; margin:0}
+#header .e_btn img {width: 100%}
+    
+#header .dimmed {display: none;position: fixed;top: 120px;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.8); }
+#header .dimmed.on {display: block;z-index: 1}
+    
+#header .gnb { position:fixed; width:260px; background:#5878a8; height:100%; top:120px; right:-260px; margin:0; float:none; z-index:9; padding-top:100px; transition:all .3s }
+#header .gnb.on { right:0 }
+  
+#header .gnb .depth1 { width: 100%; padding: 0 30px !important; text-align: left; position:relative; }
+#header .gnb .depth1::before{display: none}
+#header .gnb .depth1 > a { height:50px; line-height:50px; display:block }
+#header .gnb .depth1 > a:before { display:none }
+#header .gnb .depth1 i { position:absolute; top:0; right:0; width:60px; height:50px; line-height:50px; font-size: 0.7em; color:#0d2548; text-align:center; z-index:2; padding-right:10px }
+#header .gnb .depth1 ul { height:0; transition:all .3s; background:rgba(0,0,0,0.3); margin:0 -25px; padding:10px 0 10px 40px }
+#header .gnb .depth1.on ul { opacity: 1; height:auto }
+
+#header .gnb .depth2 > a { padding:10px 0; }
+    
+#header.down .gnb a { color: #fff }
+#header.down .gnb .depth1 > a { margin-bottom:0 }
+#header.down .gnb .depth1:hover > a { color:#fff }
+    
+#header.on { background:#fff }
+#header.on .gnb { margin:0 }
+#header.on .gnb a { color:#fff }
+#header.on .btn_user, #header.on .btn_search { margin-top:0 }
+    
+#header .sns { float:none; text-align:center; margin:30px 0 0 0 }
+#header .sns li { float:none; display:inline-block; margin:0 10px }
+
+.hd_sch_wr .box { width:96% }  
+    
+    
+/* 푸터 부분 */
+#footer h1 a { width: 99px }
+#footer .f_left { margin: 0 0 0 60px }
+#footer .f_right a:last-child { margin-left: 10px }
+    
+#footer nav { position:static; margin:0 0 10px }
+#footer nav li { margin:0 17px 0 0 }
+#footer nav li.sites { position:absolute; right:0; top:-15px; margin:0 }
+#footer dd { margin:0 20px 0 0 }
+    
+#footer_loca ul li { padding-left:40px }
+#footer_loca ul li:nth-child(1) strong { padding-left: 0;font-size: 1.4rem }    
+    
+/* 메인페이지 컨텐츠 부분 */
+#main_visual .slider h2 { font-size: 2.3em }
+#main_visual .slider p { font-size: 1.3em }
+#main_visual .roll .roll_wrap { margin: 29vh auto }
+    
+.main_cert::before { background:url(../image/cert_bg_tb.png)no-repeat center center;background-size:auto }
+    
+.main_about .bg { background-position: -1000px}
+.main_about .img { width:40% }
+.main_about .img img { position:static !important }
+.main_about .img img:first-child { width:100% }
+.main_about .img img:last-child { width:100% }
+.main_about .text { width:55% }
+
+.main_bbs section { margin:0 10px; width:calc(100%/3 - 13.4px) }
+.main_gallery { background:#f0f0f0; padding:60px 0 0 0 }
+.main_gallery h2 { position:static; color:#222; text-shadow:none }
+.main_gallery .fotorama__nav-wrap { position:static; padding:5px 0 }
+.main_gallery .fotorama__nav__shaft { border:0; background:transparent }
+
+/* 서브페이지 부분 */ 
+#contents { min-height:400px }
+.tab_menu.tab01 ul li {  }
+#ctt_con { font-size:1.12em }
+#ctt_con.sub01_01 .sec01 .img01 { width:35% }
+#ctt_con.sub01_01 .sec01 > div { width:60% }
+#ctt_con.sub01_02 .tab_menu a { font-size:30px }
+.history_list { padding:0 }
+.history_list > ul > li { width:48.5%; margin-top:40px }
+
+#bo_gall .gall_li { width:calc(100%/3 - 10.1px) }
+#bo_gall .gall_li:nth-child(4n + 1) { clear:none }
+#bo_gall .gall_li:nth-child(3n + 1) { clear:none }
+#bo_gall .gall_img:hover img { transform:none }
+#bo_gall.listtype .gall_img + div { padding:15px 30px }
+#bo_gall.listtype .bo_tit { font-size:1.6em }
+#bo_gall .gall_list_con { max-height:38px; overflow:hidden; margin-top:5px }
+
+#bo_v_act { margin:40px 0 !important }
+#bo_v_desc { margin-top:40px }
+.bo_v_nb { margin: 30px 0 }
+#bo_vc_empty { padding:40px 0 !important }
+#bo_v_con { min-height:50px }
+#bo_v_info .sv_member, #bo_v_info .sv_guest, #bo_v_info .member, #bo_v_info .guest, #bo_vc .member, #bo_vc .guest, #bo_vc .sv_member, #bo_vc .sv_guest { font-size:1.2em }
+#bo_list .td_datetime { width:60px }
+#bo_list .td_name { width:90px }
+#captcha.m_captcha #captcha_key { height:40px; margin-top:5px }
+#captcha.m_captcha #captcha_img { display:inline-block; width:120px; height:40px; }
+#captcha.m_captcha #captcha_reload { margin-top:5px }
+td .thumb { width:150px }
+td .thumb ~ div { margin-left:170px }
+#bo_v iframe { width: 100%; height:52vw }
+#sch_res_board a { min-width:0; padding:0; height:auto; line-height:1; margin:3px 10px; border:0; font-size:13px }
+#sch_res_board .sch_on { border:0 }
+.bo_v_nb li a { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; width:calc(100% - 120px); vertical-align:top }
+ 
+    
+/* 개인정보처리방침 서비스 이용약관 공통*/
+#ctt_con div.pv_tt{width:40%;font-size:1.3rem;font-weight:500;text-align:center;margin:0px 30% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /* 타이틀 */
+
+#ctt_con div.pv_txt_indent{font-size:0.98rem;margin-left:25px;} /* 들여쓰기 문단 */
+    
+/*서비스 이용약관*/
+#ctt_con div.pv_tt_2{width:90%;font-size:1.1rem;font-weight:500;text-align:center;margin:0px 5% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /*타이틀*/  
+    
+
+/* GIC 인증원 채용공고 시작 전산팀 yr 211224*/
+.content_wrap_recruitment .sec_tt{font-size:1.2rem;}
+.content_wrap_recruitment .step_list{font-size:0.95rem;}
+
+.content_wrap_recruitment .top_box{
+    background:url(/gicert_kor/theme/gicertorg/company/images/Recruitment/image/top_bg.png) no-repeat -100px -0px;
+    background-size:cover;
+    height:560px; 
+}
+.content_wrap_recruitment .top_txt_box{height: 560px;}
+.content_wrap_recruitment .top_txt_box .year{font-size:3.6rem;margin-bottom:40px;}
+.content_wrap_recruitment .top_txt_box .gic_logo_right{width:25%;margin-top:5px;}
+.content_wrap_recruitment .top_txt_box .b_tt{font-size:2.3rem;margin-bottom:60px;}
+.content_wrap_recruitment .top_txt_box .top_txt{font-size:0.95rem;margin-bottom:100px;line-height: 2.4;}
+.content_wrap_recruitment .top_txt_box .top_txt span{font-size:1.2rem;}
+.content_wrap_recruitment .top_txt_box .top_txt_2{font-size:1.2rem;bottom:50px;}
+.content_wrap_recruitment .content_box{font-size:0.9rem;}
+.content_wrap_recruitment .content_box>ul{padding:60px 8%;}
+.content_wrap_recruitment .sec_02 .step_box .box{width:19.6%;}
+.content_wrap_recruitment .sec_02 .step_box .content:nth-child(2n-1){border: 2px solid #0a4f81;font-size: 1rem;}
+.content_wrap_recruitment .sec_02 .step_box .bg_blue .content{border: 2px solid #3b729a;}
+.content_wrap_recruitment .sec_02 .step_box>div .big{font-size:1.6rem;margin-top:12%;}
+.content_wrap_recruitment .sec_02 .step_box>div.arrow{width: 3%;height: 25px;margin: 6% 2% 0;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div .txt{font-size:0.8rem;}
+    
+.content_wrap_recruitment .bottom_box{height:160px;}
+.content_wrap_recruitment .bottom_box img{width:20%; margin: 55px 40%;}
+    
+/* GIC 인증원 채용공고 종료*/
+    
+}
+    
+/*==================================================================================================================================================================================*/    
+
+
+/* (공통 기본 pc버전 1920px) 태블릿(기준: 아이패드) 세로 버전 사이즈, 최대 768px 화소까지 적용 */
+@media only screen and (max-device-width : 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    
+/* 푸터 */
+#footer { padding:30px 0 90px }
+#footer nav li { display:inline-block; float:none; margin-bottom:5px }
+#footer nav li.sites select { width:120px }
+#footer .copyright { font-size:0.9em; margin-top:15px }
+    
+#footer #top_btn { width: 40px;height: 40px; right:10px; bottom:10px }
+#footer #top_btn i { vertical-align: 6px }
+ 
+#footer h1 a { width: 66px }
+#footer dl { line-height:1.5 }
+#footer .f_left { width: 100%}
+#footer .f_right { display: none}
+#footer .sites { position:relative;left:210px;;padding:0 5px 0 0 }
+#footer .site2{ display:none } /*{display:block;position:relative;right:-320px;top:15px;}*/ /* 관련사이트 */
+    
+#footer_loca ul{ padding:30px 0; }
+#footer_loca ul li { padding-left: 3% }
+#footer_loca ul li:nth-child(1) { padding-right: 3% }
+    
+    
+/* 메인페이지 컨텐츠 부분 */
+#main_visual { height:auto }
+#main_visual .bx-wrapper { height:790px }
+#main_visual .roll .roll_wrap { margin: 28vh auto }
+
+.main_bbs { padding:0 0 25px }
+.main_bbs .wrap { padding:0 }
+.main_bbs section { width:100%; margin:25px 0 0 0; border-top:1px solid #e0e0e0; padding:0 20px; padding-top:25px }
+.main_bbs section:first-child { margin:0; border:0; }
+.main_bbs .lat .lt_more { right:20px; top:20px }
+
+.main_about .bg { background-position: -1300px}
+.main_about .text h2 { font-size: 2em;padding-top: 0 }
+.main_about .text p { font-size: 1.2em }
+.main_about .btn_area a { margin: 25px 10px 0 0 }
+.main_about .cs .cs_area { width: 100% }
+.main_about .cs .cs_area .icon { margin: 0 1rem 0 0 }
+.main_about .cs .cs_area .title { margin: 0 1rem 0 0 }
+.main_about .cs .cs_area .gic_email { font-size: 1.3rem }
+
+.main_product, .main_bbs { padding:40px 0 }
+.main_product h2 { margin:0 0 20px; }
+.main_product .tab_menu li a { background:transparent }
+.main_product .tab_con { margin-top:20px }
+.main_product .pic_lt .ts-controls { text-align:left }
+
+.main_gallery { padding-top:40px }
+.main_gallery h2 { font-size: 2em padding:0; margin:0 0 20px }
+.main_gallery .tab_con { margin-top:30px }
+
+.pic_lt .ts-controls button.ts-paging-btn { margin:3px }
+.pic_lt #touchSlider { min-height: 189px !important }
+
+.tab_menu li a { padding:0; margin:0; border:0 }
+.root_daum_roughmap .wrap_map { height:250px !important }
+
+#sub_visual { height:300px }
+#sub_visual h2 { font-size:2.2em; padding-top:215px } /*모바일 sub_visual 높이 및 여백 조정 210804 전산팀 yr*/
+#sub_visual h2:after { bottom:-15px }
+
+#snb .depth1 > li { width:calc(50% + 1px) }
+#snb .depth1 > li:first-child { display:none; }
+#snb .depth1 > li:nth-child(2) { border-left:0 }
+
+/* 상세페이지 탭메뉴 시작 */
+#contents { min-height:300px; margin:0 }
+.container_title { font-size:2em; padding-top:15px; margin:0 0 30px }
+.container_title:before { width:35px; height:2px; margin-left:-17.5px }
+    
+.tab_menu.tab01 ul li { width:calc(100%/2 - 3.1px) !important;margin:1px 0 2px 3px }
+.tab_menu.tab01 ul li a { margin:0; padding:10px 0; display:block }
+    
+/*.tab_menu.tab02 ul { margin:0 0 0 -3px }
+.tab_menu.tab02 ul li { float:left; width:calc(100%/2 - 3.1px); }
+.tab_menu.tab02 ul li a { margin:0; padding:10px 0; display:block;line-height: 1.5 }      */
+/* 상세페이지 탭메뉴 종료 */    
+    
+#left_area { float:none; width:100% }
+/* 200327 islro 좌측메뉴 fix 해제 */
+#left_area.fix { position:static }
+
+#snb { border:0 }
+.left_snb { text-align:justify; border-bottom:1px solid #e0e0e0 }
+.left_snb h2 { display:none }
+.left_snb ul { margin:2px 0 0 1px }
+.left_snb li { float:left; width:calc(100%/2 + 1px); margin:-1px 0 0 -1px }
+.left_snb li a { text-align:center; border:1px solid #e0e0e0; }
+.left_snb li a:after { width:100%; background:#fff; right:0; top:auto; transform:none; bottom:0 }
+.left_snb li:hover a { background:#fff }
+.left_snb li.on a { border-color:#1c65c8; position:relative; z-index:1 }
+.left_snb li.on a:after { display:none }
+.left_cs { display:none }
+
+#right_area { width:100%; float:none; padding:50px 0 0 0; min-height:inherit }
+.container_title { display:none }
+
+    
+    
+#bo_cate { margin-top:0 }
+#bo_cate a { min-width:0; padding:0; height:auto; line-height:1; margin:3px 10px; border:0; font-size:13px }
+#bo_cate #bo_cate_on { border:0 }
+#bo_gall #gall_ul { margin:10px 0 0 0; }
+#bo_gall .gall_li { width:100%; float:none; margin-left:0; margin-bottom:15px }
+#bo_gall .bo_tit { white-space:normal }
+#bo_v_item #bo_v_img { float:none; width:100%; margin-top:5px }
+#bo_v_item #bo_v_summary { float:none; width:100%; margin:30px 0 0 0 }
+#bo_v_summary .bo_v_title { font-size:1.5em }
+#bo_v_summary .bo_v_title small { font-size:0.6em }
+#bo_v_summary, #bo_v_desc { font-size:1em }
+#bo_v_summary .refer { margin:12px 0 0 0 }
+#bo_v_sns li a { width:50px; height:50px; line-height:50px }
+#bo_v_share .btn { width:50px; height:50px; font-size:11px }
+#bo_v_share .btn i { margin:8px 0 0 0 }
+#bo_v_share { padding:25px 0 }
+.bo_v_nb { margin:20px 0 }
+#bo_v_desc { margin-top:30px }
+.bo_vc_w_info .frm_input { width:49.5%; margin:0 }
+.bo_vc_w_info #wr_password { float:right }
+#bo_vc article .pf_img { display:none }
+#bo_v_info .sv_member, #bo_v_info .sv_guest, #bo_v_info .member, #bo_v_info .guest, #bo_vc .member, #bo_vc .guest, #bo_vc .sv_member, #bo_vc .sv_guest { font-size:1.1em }
+#bo_gall.listtype .gall_img { float:none; width:100% }
+#bo_gall.listtype .gall_img + div { float:none; width:100%; padding:20px; font-size:1em }
+#bo_gall .bo_tit, #bo_gall.listtype .bo_tit { font-size:1.3em }
+.gall_list_opt dt { min-width:60px; text-align:center }
+.gall_list_opt dt, .gall_list_opt dd { font-size:.95em }
+td .thumb { width:100%; float:none }
+td .thumb ~ div { margin-left:0; margin-top:15px }
+#bo_v_title { font-size:1.3em; font-weight:500 }
+#bo_v_title .bo_v_tit { font-size:1em }
+#bo_v_act { margin:30px 0 !important }
+.bo_v_nb li .nb_tit { padding-right:0; width:65px; vertical-align:top }
+.tbl_head01 td, .tbl_head01 th { font-size:1.05em }
+#faq_sch .btn_submit { width:70px; }
+#faq_sch .frm_input { width:calc(100% - 75px) }
+#faq_sch .frm_input, #faq_sch .btn_submit { height:36px; font-size:1em }
+#faq_sch { padding:20px; }
+#faq_wrap li { font-size:1em }
+#bo_v_con { font-size:1em }
+#bo_list .td_stat, #bo_v_rel .td_stat { width:80px }
+#bo_list .txt_rdy, #bo_v_rel .txt_rdy { padding:0 5px }
+#bo_list .td_date { width:70px }
+.bo_cate_link { float:none; display:block }
+#bo_v_title .bo_v_cate { display:block; font-size:0.7em }
+.bo_v_com > li { margin-left:0 }
+.bo_sch { width:320px; margin-left:-160px }
+.bo_sch .sch_input { width:240px }
+#sch_res_detail { padding:15px }
+#sch_res_detail select, #sch_res_detail select { width:49.4% }
+#sch_res_detail .sch_wr { width:100%; margin:5px 0 0 0 }
+.switch_field { padding-bottom:0 }
+#sch_res_ov h2 { display:none }
+#sch_res_ov ul { float:none }
+.sch_res_list { font-size:.9em }
+#bo_gall .gall_list_con { max-height:none; margin-top:10px }
+#bo_v_info { margin:0 0 25px }
+#bo_v_con { margin-top:0 }
+#bo_v { font-size:1.05em }
+#bo_list .txt_done, #bo_v_rel .txt_done { font-size:0.9em; padding:0 6px }
+#bo_list .td_stat, #bo_v_rel .td_stat { width:70px }
+.ctt_admin { font-size:13px }
+input.hasDatepicker { width:150px; padding-right:0 !important }
+#bo_v_ans h2 { font-size:1.3em }
+
+ul.faq_list_board { font-size:1em }
+
+.mbskin .mbskin_box { width:320px; margin: 10px auto 20px; }
+.mbskin .mbskin_logo img {width: 100px;margin-top: 20px; }
+.mbskin .mbskin_copy{ font-size:0.9em;  }
+#mb_login #sns_login .txt { padding-left:0 !important }
+#fregister p { padding:10px; line-height:1.3; font-size:1em; height:auto }
+#sns_register h2 { display:none }
+#sns_register .sns-wrap { width:100%; display:block; text-align:center }
+#fregister h2 { font-size:1.1em }
+
+#ctt_con { font-size:1em; overflow:hidden }
+#ctt_con.sub01_01 .sec01 > div { float:none; width:100% }
+#ctt_con.sub01_01 .sec01 h2 { font-size:1.5em }
+#ctt_con.sub01_01 .sec01 .img01 { width:100%; float:none }
+#ctt_con.sub01_01 .sec01 .img01 p { text-align:center }
+#ctt_con h2.title { font-size:1.4em; padding-bottom:20px }
+#ctt_con.sub01_01 th { width:auto }
+#ctt_con.sub01_01 th, #ctt_con.sub01_01 td { padding:12px 7px; word-break:keep-all }
+#ctt_con.sub01_02 .tab_menu a { font-size:16px; border:1px solid #e0e0e0; border-left:0; border-right:0; padding:10px 0; margin:0 }
+#ctt_con.sub01_02 .tab_menu li.on a { border-color:#666 }
+#ctt_con.sub01_02 .tab_menu { margin:0 0 30px }
+
+#ctt_con.sub01_02 .tab_menu { margin:0 }
+#ctt_con.sub01_02 .tab_menu a small { display:none }
+.history_list h3 { font-size:1.9em }
+.history_list li li { background-size:4px 4px; background-position:0 5px; padding-left:10px }
+.history_list > ul > li { width:100%; margin-top:30px }
+.os_mac.root_daum_roughmap .section_address .tit, .os_mac.root_daum_roughmap .section_address .txt { font-size:1em !important }
+
+.request { display:block;width:100%; margin-top:70px }
+.request:after{ content:""; display:block; clear:both;}
+.floating {position:fixed; bottom:0; left:0; z-index:10; background:rgba(0,0,0,0.5);}
+.floating .inner {padding:10px 10px;}
+.btn_col {display:table; table-layout:fixed; width:86.5%;}
+.btn_col span {display:table-cell; padding:0 3px; vertical-align:top;}
+.btn_col [class*=btn_type] {display:block; width:100%; text-align:center; }
+.btn_type1 {height:40px; line-height:40px; font-size:16px; color:#fff !important; background-color:#000; }
+.btn_type2 {height:40px; line-height:40px; font-size:16px; color:#000 !important; background-color:#fff; border:1px solid #000;}
+    
+/* header, footer===> 1px가 최소이므로 눈에 잘 띄지 않게하려면 선을 연한 회색으로 만들었다 . ^^ . */
+.hr01 {display:block;width:100%;border:0.001rem solid white;position:relative;right:0%;top:0px;text-align:center;}  /* header 하단 구분선  */
+.hr02 {display:block;width:100%;border:0.001rem solid white;position:relative;right:0%;top:-22px;text-align:center;border-color:darkgray;}  /* footer 상단 구분선  */
+.hr03 {border-top: 1px solid #cccccc;display:block;margin-bottom:6px;margin-top:0;width:100%;} /*footer, 관련사이트 위 구분선  */    
+    
+/* GIC 인증원 채용공고 시작 전산팀 yr 211224*/
+.content_wrap_recruitment .top_txt_box, .content_wrap_recruitment .content_box>ul{padding-left: 6% !important;padding:60px 6%;}
+.content_wrap_recruitment .sec_tt{font-size:1.3rem;margin-bottom:30px;}
+.content_wrap_recruitment .step_list{font-size:1rem;width:100%;margin:0% 2% !important;}
+.content_wrap_recruitment .top_box{
+    background:url(/gicert_kor/theme/gicertorg/company/images/Recruitment/image/top_bg.png) no-repeat -100px -0px;
+    background-size:cover;
+    height:620px; 
+}
+.content_wrap_recruitment .top_txt_box{height: 620px;}
+.content_wrap_recruitment .top_txt_box .gic_logo_right {width:22%;}
+.content_wrap_recruitment .top_txt_box .year{font-size:3.5rem;margin-bottom:40px;}
+.content_wrap_recruitment .top_txt_box .b_tt{font-size:2.4rem;margin-bottom:70px;}
+.content_wrap_recruitment .top_txt_box .top_txt{font-size:1.1rem;font-weight:400;margin-bottom:40px;line-height: 2.4;position:static;text-align:justify;}
+.content_wrap_recruitment .top_txt_box .top_txt span{font-size:1.4rem;font-weight:500;}
+.content_wrap_recruitment .top_txt_box .top_txt .mobile_none{display:none;}
+.content_wrap_recruitment .top_txt_box .top_txt_2{font-size:1.4rem;bottom:60px;right:6%;}
+
+.content_wrap_recruitment .content_box{font-size:1rem;line-height: 1.6}
+.content_wrap_recruitment .sec_02 .step_box>div .big{font-size:1.5rem;margin:10px 0 3px;color:#201e1e;}
+
+.content_wrap_recruitment .sec_02 .step_box .box{width:100%;}
+.content_wrap_recruitment .sec_02 .step_box .box:before{display: none;}
+    
+/*768px부터 절차 배경색 변경*/
+.content_wrap_recruitment .sec_02 .step_box .content:nth-child(2n-1){
+    position: static;
+    border: 1px solid #1d72b1;
+    border-radius: 25px;
+    height: 90px;
+    font-size: 1.1rem;
+    color:#201e1e;
+}
+.content_wrap_recruitment .sec_02 .step_box .bg_blue .content{background:#287fbf;border: 1px solid #287fbf;color:#fff;}
+.content_wrap_recruitment .sec_02 .step_box .bg_blue .big{color:#fff;}
+
+.content_wrap_recruitment .sec_02 .step_box>div.arrow {
+    width: 100%;
+    background-size: 6%;
+    height: 50px;
+    margin: 10px auto;
+    transform: rotate( 90deg );
+}
+.content_wrap_recruitment .sec_05 .sec_05_box{padding: 10% 0%;border: 1px solid #888888;background:#f9f9f9;}
+.content_wrap_recruitment .sec_05 .sec_05_box .top_icon_box, .content_wrap_recruitment .sec_05 .sec_05_box .btm_icon_box{width: 38%;margin: 0 6% 60px;}
+.content_wrap_recruitment .sec_05 .sec_05_box .none{margin-bottom:0px;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div img{width:50%;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div .txt{font-size:1.1rem;margin-top:15px;letter-spacing: -0.1px;color:#0569b1;}
+
+
+    
+/* GIC 인증원 채용공고 종료*/
+       
+}
+    
+    
+/*==================================================================================================================================================================================*/
+    
+    
+/* (공통 기본 pc버전 1920px) 모바일(가장 작은 사이즈: SAMSUNG GALAXY S6) 가로 버전 사이즈, 최소 360px ~ 최대 640px 화소까지 적용 */    
+@media only screen and (max-device-width : 640px) { 
+    
+/* pc버전 display:none / 모바일버전 display:block */   
+#telnum { display: none !important }
+.s_mobile_only { display:block !important }
+.s_mobile_no { display:none !important }
+    
+/* 헤더 */
+#logo_dna { height: 0 } 
+#header { top: 0;height: 100px !important }
+#header .gnb { top: 100px; padding-top: 40px; }
+#header .dimmed { top: 100px }   
+#header .btn_gnb { top: 35px}
+#header .btn_user { top: 35px }
+#header .btn_search { top: 35px }
+#header .e_btn { top: 35px }
+    
+#header .m_util_wrap .m_logo { width: 150px;height: 50px; padding-top: 25px }
+#header .m_util_wrap .m_logo a { height: 90px;background: url(/theme/gicertorg/img/m_GIC_ci.png) no-repeat;background-size: 100%}
+#header.on .m_util_wrap .m_logo a { height: 90px;background: url(/theme/gicertorg/img/m_ci_img_log.png) no-repeat;background-size: 100%}
+
+/* 메인페이지 컨텐츠 부분 */
+#main_visual .bx-wrapper { height: 610px }
+#main_visual .roll .roll_wrap { margin: 17vh auto }
+#main_visual .slider h2 { font-size: 2em; }
+#main_visual .slider p { font-size: 1.2em }
+#main_visual .roll { padding: 0 30px }
+    
+.main_cert::before { background:url(../image/cert_bg_mb.png)no-repeat center center;background-size:auto }/* 인증서검색 모바일버전 배경이미지 */
+.main_cert h2 { font-size:1.3rem; }
+    
+.main_about .bg { background: rgba(147,162,191,.25) } 
+.main_about .img { display:none }
+.main_about .text { width:100%; }
+.main_about .text h2 { width: 110%;margin: 0 0 20px }
+.main_about .text p { font-size: 1.1em;margin: 0 0 10px }
+.main_about .btn_area{ text-align: center; }
+  
+.main_product h2, .main_gallery h2 { font-size: 1.8em }
+.main_product .tab_menu p { font-size: 1em }
+    
+#sub_visual { height:240px }
+#sub_visual h2 { font-size:2.2em; padding-top:150px } /*모바일 sub_visual 높이 및 여백 조정 210804 전산팀 yr*/
+    
+/* 서브페이지 부분 */
+.tab_menu.tab01 h2::before { width: 20% }
+.tab_menu.tab01 h2::after { width: 20% }
+    
+    
+/* 개인정보처리방침 서비스 이용약관 공통*/
+#ctt_con div.pv_content{font-size:0.9rem;padding:40px 5%;margin-top:30px;}
+#ctt_con div.pv_tt{width:40%;font-size:1rem;margin:0 30% 40px;} /* 타이틀 */
+#ctt_con div.pv_em{margin:20px 0 30px;padding-bottom:30px;} 
+#ctt_con div.pv_sec{margin-bottom:30px;}/*큰 문단*/
+#ctt_con p.pv_sec_tt{font-size:0.98rem;margin-bottom:15px;}/*큰 문단 속 타이틀*/
+#ctt_con div.pv_txt_indent{font-size:0.88rem;margin-left:15px;} /* 들여쓰기 문단 */
+#ctt_con span.pv_gray{font-size:0.85rem;}
+
+/*서비스 이용약관*/
+#ctt_con div.pv_tt_2{width:92%;font-size:1rem;font-weight:500;text-align:center;margin:0px 4% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /*타이틀*/
+#ctt_con div.pv_txt_block_2{font-size:0.88rem;}/*문단 속 작은 문단*/
+    
+    
+    
+/* 푸터 */
+#footer h1 { display: none }
+#footer .f_left { margin: 0 }
+#footer .f_left .privacyprovision { margin-bottom:10px; }
+#footer .f_left .privacyprovision a { display: inline-block; margin-right: 15px}
+#footer dl{ margin-top:10px; }
+
+#footer_loca {margin-top:20px; }
+#footer_loca ul { display: block }
+#footer_loca ul li { padding-left: 0;padding-bottom: 10px }
+#footer_loca ul li strong { font-size: 0.9rem;padding-bottom: 6px }
+#footer_loca ul li:nth-child(1) { border-right: none;border-bottom: 1px solid #a0a0a0;padding-bottom: 15px;margin-bottom: 15px }
+#footer_loca ul li:nth-child(3) { padding-bottom: 0 }
+    
+    
+/* GIC 인증원 채용공고 시작 전산팀 yr 211224*/
+.content_wrap_recruitment .content_box>ul>li:not(.sec_05) {margin-bottom:60px;}   
+.content_wrap_recruitment .step_list{font-size:0.95rem;}
+    
+.content_wrap_recruitment .top_box{
+    background:url(/gicert_kor/theme/gicertorg/company/images/Recruitment/image/top_bg.png) no-repeat -200px -0px;
+    background-size:cover;
+    height:560px; 
+}
+.content_wrap_recruitment .top_txt_box{height: 560px;}
+.content_wrap_recruitment .top_txt_box .year{font-size:2.8rem;margin-bottom:30px;}
+.content_wrap_recruitment .top_txt_box .b_tt{font-size:2.4rem;margin-bottom:60px;}
+.content_wrap_recruitment .top_txt_box .top_txt{font-size:1rem;margin-bottom:30px;line-height: 2.4;}
+.content_wrap_recruitment .top_txt_box .top_txt span{font-size:1.2rem;}
+.content_wrap_recruitment .top_txt_box .top_txt_2{width: 100%;font-size: 1.2rem;bottom: 60px;left: 0%;right: 0%; text-align: center;}
+    
+.content_wrap_recruitment .content_box{font-size:0.9rem;line-height: 1.6}
+.content_wrap_recruitment .sec_01 table th, content_wrap_recruitment .content_box table td{border: 1px solid #707071;padding: 12px 1.5%;}
+    
+.content_wrap_recruitment .sec_02 .step_box .content:nth-child(2n-1), .content_wrap_recruitment .sec_02 .step_box .bg_blue .content{border-radius: 20px;height: 90px;font-size: 1.1rem;}
+.content_wrap_recruitment .sec_02 .step_box>div .big{font-size:1.4rem;margin:12px 0 3px;color:#201e1e;}
+.content_wrap_recruitment .sec_02 .step_box>div.arrow {background-size: 5%;height: 40px;margin: 10px auto;}
+.content_wrap_recruitment .sec_05 .sec_05_box{padding: 6% 0%;border-radius: 20px;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div .txt{font-size:0.9rem;margin-top:12px;}
+    
+.content_wrap_recruitment .bottom_box{height:150px;}
+.content_wrap_recruitment .bottom_box img{width:30%;height:auto;margin:45px 35%;}
+    
+/* GIC 인증원 채용공고 종료*/    
+    
+}
+    
+    
+/*==================================================================================================================================================================================*/
+    
+
+
+/* (공통 기본 pc버전 1920px) 모바일(가장 큰 사이즈: iPhone 6/7/8 Plus) 세로 버전 사이즈, 최소 360px ~ 최대 414px 화소까지 적용 */
+@media only screen and (min-width:360px) and (max-device-width : 414px) { 
+    
+.wrap { padding: 0 4%; }
+    
+/* 헤더 */
+#header .btn_gnb { right: 4%; }
+#header .btn_user { right: 14%;}
+#header .btn_search { right: 24%; }
+#header .e_btn { right: 34%; }
+    
+/* 메인페이지 컨텐츠 부분 */
+#main_visual .slider h2 { font-size: 1.8em }
+#main_visual .slider .btn_more{display:none;}
+
+.main_about .btn_area a { width: calc(50% - 15px) }
+
+
+ /* 서브페이지 부분 */
+.tab_menu.tab01 h2::before { display: none }
+.tab_menu.tab01 h2::after { display: none }   
+#right_area {padding: 20px 0 !important}
+
+  
+#hd_pop .mb_no {display: none}
+#hd_pop .mb_y {display: block}
+#hd_pop {width: 100% !important}
+#hd_pops_2 {top: 150px !important}
+.hd_pops_con {width: 100% !important;height: 100% !important; overflow: hidden !important;}
+.duns {width: 50% !important;height: 287px !important; padding: 3px !important}
+.duns .inner {width: 100% !important;height: 280px !important}
+.duns .inner .title {font-size: 0.9em !important;margin: 10px auto 0!important}
+.duns .inner p {width: 90% !important; font-size: 0.75em !important;text-align: justify;margin: 20px auto 0!important}
+.duns .inner .tel {width: 80% !important;height: 70px !important;line-height: 1.2 !important;padding-top: 10px !important; border: none !important; border-top: 1px solid #d1d1d1 !important;border-radius: 0 !important}
+.duns .inner .tel span strong {display: block;text-align: right;font-size: 14px;margin-top: 10px}
+    
+.fssc {width: 50% !important;height: 287px !important;padding: 3px !important}
+.fssc .inner {width: 100% !important;height: 280px !important}
+.fssc .inner .title {font-size: 0.9em !important;margin: 10px auto 0!important}
+.fssc .inner p {width: 90% !important; font-size: 0.75em !important;text-align: justify;margin: 10px auto 0!important}
+.fssc .inner .tel {width: 80% !important;height: 70px !important;line-height: 1.2 !important;padding-top: 10px !important; border: none !important; border-top: 1px solid #d1d1d1 !important;border-radius: 0 !important}
+.fssc .inner .tel span strong {display: block;text-align: right;font-size: 14px;margin-top: 10px}
+
+.clk {display: block;text-align: center}
+    
+.mbskin .mbskin_copy { width: 320px;margin: 0 auto; font-size: 0.7rem }
+    
+/* 개인정보처리방침 서비스 이용약관 공통*/
+#ctt_con div.pv_tt{width:50%;font-size:1rem;margin:0 25% 40px;} /* 타이틀 */
+
+/*서비스 이용약관*/
+#ctt_con div.pv_tt_2{width:92%;font-size:0.9rem;font-weight:500;text-align:center;margin:0px 4% 60px;padding-bottom:10px;border-bottom:2px solid #333;} /*타이틀*/
+    
+/* GIC 인증원 채용공고 시작 전산팀 yr 211224*/  
+.content_wrap_recruitment .top_txt_box, .content_wrap_recruitment .content_box>ul{padding:40px 6% !important;}
+.content_wrap_recruitment .content_box>ul>li:not(.sec_05) {margin-bottom:60px;}
+
+.content_wrap_recruitment .sec_tt{font-size:1.1rem;margin-bottom:30px;}
+.content_wrap_recruitment .step_list{font-size:0.9rem;width:100%;margin:0%;}
+.content_wrap_recruitment .step_list li{font-weight:400;}
+
+.content_wrap_recruitment .top_box{
+    background:url(/gicert_kor/theme/gicertorg/company/images/Recruitment/image/top_bg.png) no-repeat -200px -0px;
+    background-size:cover;
+    height:450px; 
+}
+.content_wrap_recruitment .top_txt_box{height: 450px;}
+.content_wrap_recruitment .top_txt_box .igc_logo_right{width:32%;}
+.content_wrap_recruitment .top_txt_box .year{font-size:2rem;margin-bottom:18px;}
+.content_wrap_recruitment .top_txt_box .b_tt{font-size:1.6rem;margin-bottom:50px;}
+.content_wrap_recruitment .top_txt_box .top_txt{font-size:0.9rem;line-height: 2.2;}
+.content_wrap_recruitment .top_txt_box .top_txt span{font-size:1rem;font-weight:500;}
+.content_wrap_recruitment .top_txt_box .top_txt .mobile_none{display:none;}
+.content_wrap_recruitment .top_txt_box .top_txt_2{font-size: 1rem;bottom: 50px;}
+
+.content_wrap_recruitment .content_box{font-size:0.8rem;line-height: 1.6;}
+.content_wrap_recruitment .sec_02 .step_box>div .big{font-size:1.2rem;margin:2% 0 2px;color:#201e1e;}
+.content_wrap_recruitment .sec_02 .step_box .content:nth-child(2n-1), .content_wrap_recruitment .sec_02 .step_box .bg_blue .content{border-radius: 10px;height: 70px;font-size: 0.95rem;}
+.content_wrap_recruitment .sec_02 .step_box>div.arrow {background-size: 6%;height: 40px;margin: 5px auto;}
+
+.content_wrap_recruitment .sec_05 .sec_05_box{padding:20px 0%;border: 1px solid #707071}
+.content_wrap_recruitment .sec_05 .sec_05_box .top_icon_box, .sec_05 .sec_05_box .btm_icon_box:not(.none){width: 46%;margin: 0 2% 50px;}
+.content_wrap_recruitment .sec_05 .sec_05_box .btm_icon_box.none{width: 46%;margin: 0 2% 0px;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div img{width:50%;}
+.content_wrap_recruitment .sec_05 .sec_05_box>div .txt{font-size:0.9rem;margin-top:10px;}
+
+.content_wrap_recruitment .bottom_box{height:120px;}
+.content_wrap_recruitment .bottom_box img{width:30%;height:auto;margin:40px 35%;}
+
+    
+/* GIC 인증원 채용공고 종료*/   
+    
+    
+}
+

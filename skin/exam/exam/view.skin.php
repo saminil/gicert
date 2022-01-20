@@ -1,0 +1,1 @@
+ <meta http-equiv="refresh" content="0; url=<?=$g4[path]?>/bbs/board.php?bo_table=<?=$bo_table?>">

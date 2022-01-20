@@ -1,0 +1,224 @@
+/*-----------------------------------
+reset.css
+-----------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	-webkit-appearance: none;
+}
+article, aside, details, figcaption, figure, header, footer, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-----------------------------------
+base
+-----------------------------------*/
+
+
+html {
+	font-size: 10px;
+}
+body {
+	font-family: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, Helvetica, Verdana, sans-serif;
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: #333;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+/* font-size
+10px = 1.0rem
+11px = 1.1rem
+12px = 1.2rem
+...*/
+a {
+	color: #333;
+	text-decoration: none;
+	/*transition: .2s;*/
+	/*-ms-transform: rotate(0.05deg);*/
+}
+a:focus {
+	outline: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active,
+a:focus {
+	text-decoration: none;
+}
+a.linkcolor {
+	color: #b33557;
+	text-decoration: none;
+}
+a.linkcolor:hover {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6, strong {
+	font-weight: bold;
+}
+hr {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+img {
+	vertical-align: bottom;
+}
+
+/*h2, h3, h4, p {
+	-ms-transform: rotate(0.05deg);
+}*/
+/*-----------------------------------
+clear
+-----------------------------------*/
+.clear {
+	clear: both;
+}
+.clearfix::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+
+/*-----------------------------------
+여기부터 탭css
+-----------------------------------*/
+/* tabs */
+.tab li,
+.tab2 li {
+	float: left;
+}
+.tab li {
+	width: 25%;
+}
+.tab2 li {
+	width: 80px;
+	text-align: center;
+}
+.tab li span {
+	background: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 15px;
+	border: 1px solid #c1c1c1;
+}
+.tab li span::before {
+	font-family: FontAwesome;
+	content: '\f054';
+	font-size: 1.2rem;
+	padding: 4px;
+	float: left;
+	color: #999;
+	line-height: 1.7;
+}
+.tab li span:hover {
+	background: #ebf1f4;
+	border: 1px solid #ebf1f4;;
+}
+.tab .active span {
+	background: #dde3e7;
+	border: 1px solid #dde3e7;;
+}
+
+/* tab2 */
+.tab2 li span {
+	background: #a1a1a1;
+	cursor: pointer;
+	display: block;
+	padding: 10px;
+	color: #fff;
+	position: relative;
+}
+.tab2 li span::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #fff;
+	width: 1px;
+	height: 100%;
+}
+.tab2 li:last-child span::after {
+	content: none;
+}
+.tab2 li span:hover {
+	background: #118ce2;
+}
+.tab2 .active span {
+	background: #005da1;
+}
+
+
+@media screen and (max-width: 767px) {
+	.tab li {
+		width: 50%;
+	}
+	.tab li,
+	.tab li:last-child {
+		margin-bottom: 1px;
+	}
+	.tab li span {
+		display: inline-block;
+		padding: 10px;
+		width: 100%;
+	}
+}
+
+/* tabContent */
+
+.tabContent {
+	clear: both;
+	display: none;
+	overflow: hidden;
+	padding: 30px 0;
+	background: #dde3e7;
+}
+.active {
+	display: block;
+}
+
+.tabContentInner {
+	background: #fff;
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+@media screen and (max-width: 767px) {
+	.tab li span {
+		font-size: 1.4rem;
+	}
+
+}
+
+@media screen and (max-width: 399px) {
+	.tabContent {
+		padding: 10px 0 20px;
+	}
+	.tab li span {
+		font-size: 1.2rem;
+	}
+
+}
+
+
+/* tabContent2 */
+
+.tabContent2 {
+	display: none;
+	overflow: hidden;
+}

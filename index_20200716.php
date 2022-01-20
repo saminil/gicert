@@ -1,0 +1,240 @@
+<?php
+define('_INDEX_', true);
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+if (G5_IS_MOBILE) {
+    include_once(G5_THEME_MOBILE_PATH.'/index.php');
+    return;
+}
+
+include_once(G5_THEME_PATH.'/head.php');
+?>
+
+
+
+<div id="main_visual">	
+	<div class="slider">
+	
+		<div class="roll roll01">
+			<div class="black"></div>
+			<!------영상일 경우 : video src="http://a01.sgedu.co.kr/theme/a01/img/visual01.mp4" autoplay="autoplay" loop="loop" muted="muted"></video------->
+			<h2>IGC인증원</h2>
+			<hr>
+			<p>IGC는 제품 및 시스템 인증의 선도기관입니다.<br class="mobile_no" /><br>IGC는 신뢰성 있는 동반자로서 고객의 지속 가능한 발전과<br> 성능 향상에 대한 획기적인 방안을 제공합니다.</p>
+			<a href="javascript:" class="btn_more">더보기</a>
+		</div>
+		
+		<div class="roll roll02">
+			<h2>Institute <br>Global Certification </h2>
+			<hr>
+			<p>With IGC, Better Quality and Promising Future!!<br class="mobile_no" /><br>IGC는 신뢰성 있는 동반자로서 고객의 지속 가능한 발전과 <br>성능 향상에 대한 획기적인 방안을 제공합니다.</p>
+			<a href="javascript:" class="btn_more">더보기</a>
+		</div>
+		
+		<div class="roll roll03">
+			<h2>IGC인증원</h2>
+			<hr>
+			<p>IGC는 국내외 기업의 경쟁력 향상을 위한 <br>시스템 및 제품인증 서비스를 제공하는 국제인증기관입니다.<br class="mobile_no" /><br> IGC는 고객과 이해관계자들에게 <br>경쟁력 있는 최고의 가치를 제공하여,<br> 지속적 동반 성장을 통해<br> IGC는 세계적인 인증기관으로 거듭나고 있습니다.</p>
+			<a href="javascript:" class="btn_more">더보기</a>
+		</div>
+	</div>	
+</div>
+	
+	<!-- 메인 이벤트 /theme/구매테마/skin/latest/event/latest.skin.php -->
+	<!----?php echo latest('theme/event', 'event', 1, 10); ?---->
+	<!-- /메인 이벤트 -->		
+
+
+
+
+
+<?
+$v = @$_GET['view'];
+if($v == 'dev'){
+?>
+
+<style type="text/css">
+.main_cert .form_wrap{
+	width: 90%;	
+	max-width: 500px;
+	align-items: center;
+	margin: 0px auto;
+	text-align: center;
+}
+.main_cert .form_wrap input{
+	width: 70%;
+}
+.main_cert .form_wrap button{
+	margin-left: 15px;
+	padding:7px 15px;
+	border:1px solid #ddd;
+	background: #f3f3f3;
+    vertical-align: top;
+}
+
+.main_cert #cert_rst{
+	text-align: left;
+    margin-top: 20px;
+    font-size: 1.05em;
+    margin: 0px auto;
+    margin-top: 30px;
+    max-width: 800px;
+}
+
+.main_cert #cert_rst p{
+	text-align: center;
+}
+
+.main_cert #cert_rst b::before{
+	content: '-';
+	margin-right: 5px;
+	
+}
+.main_cert #cert_rst span{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+</style>
+<section class="main_sec main_product main_cert">
+	<div class="wrap">
+		<h2>인증서 검색</h2>
+
+		<div class="form_wrap">
+			<input type="text" name="cert_code" id="cert_code" placeholder="Please Insert Certificate Number" />
+			<button id="cert_btn">검색</button>
+		</div>
+	</div>
+	<div id="cert_rst" class="wrap"></div>
+</section>
+
+<?
+}
+?>
+
+
+<section class="main_sec main_bbs">
+	<div class="wrap">
+		<!-- 일반 최근글 /theme/구매테마/skin/latest/basic/latest.skin.php -->
+		<section><?php echo latest('theme/basic', 'notice', 5, 40); ?></section>
+		<!-- 일반 최근글 /theme/구매테마/skin/latest/basic/latest.skin.php -->
+		<section><?php echo latest('theme/basic', 'free', 5, 40); ?></section>
+		<!-- 질문과답변 최근글 /theme/구매테마/skin/latest/qna/latest.skin.php -->
+		<section><?php echo latest('theme/qna', 'qa', 5, 40); ?></section>
+		
+	</div>
+</section>
+
+
+<section class="main_sec main_about">
+	<div class="bg"></div>
+	<div class="wrap animatedParent animateOnce" data-sequence="500">
+		<div class="img animated fadeInRightShort" data-id="1">
+			<img src="<?php echo G5_THEME_URL ?>/img/main_about_img01.png" alt=" " />
+			<img src="<?php echo G5_THEME_URL ?>/img/main_about_img02.png" alt=" " />
+		</div>
+		<div class="text animated fadeInUpShort" data-id="2">
+			<div class="animatedParent animateOnce" data-sequence="250">
+				<h2 class="animated fadeInUpShort" data-id="1"><!---about----> <strong>IGC인증원</strong></h2>
+				<h3 class="animated fadeInUpShort" data-id="2">고객님의 성공을 위한 큰 힘이 되겠습니다.</h3>
+				<p class="animated fadeInUpShort" data-id="3">기업의 Identity와<br class="pc_only" /> 효과적인 해외진출을 고려한 최적의 제품&시스템 <br class="pc_only"/>인증기관입니다. </p>
+				<p class="animated fadeInUpShort" data-id="4">효과적인 제품 및 시스템 인증을 지원하기 위하여<br class="pc_only" /> 시험 및 검사를 진행하고 고객사의 업무 수행에 필요한 인력을 양성하기 위하여 교육 및 훈련을<br class="pc_only" /> 제공하고 있습니다. </p>
+				<div class="btn_area animated fadeInUpShort" data-id="5">
+					<a href="<?php echo G5_THEME_URL ?>/sub01/sub01.php">회사소개</a>
+					<a href="<?php echo G5_THEME_URL ?>/sub01/sub06.php">오시는길</a>
+				</div>
+				<dl class="cs animated fadeInUpShort" data-id="6">
+					<dt>고객행복센터</dt>
+					<dd>02.6749.0701 <small>평일 AM 09:00 ~ PM 6:00</small></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="main_sec main_product">
+	<div class="wrap">
+		<h2>회사안내/인증서비스 브로셔 </h2>
+		<!-- 제품 슬라이드 /theme/구매테마/skin/latest/pic_block_slide/latest.skin.php -->
+		<?php echo latest('theme/pic_block_slide', 'notice', 20, 23); ?>
+	</div>
+</section>
+
+<!-------section class="main_sec main_gallery"----->
+	<h2 style="height: 15px;background-color:#ddd9d9;"></h2>
+	<!-- 포트폴리오 슬라이드 /theme/구매테마/skin/latest/portfolio/latest.skin.php -->
+	<!----?php echo latest('theme/portfolio', 'portfolio', 5, 40); ?--->
+<!----/section----->
+
+
+
+
+<script>
+$(document).ready(function(){
+	$('#main_visual .slider').bxSlider({
+		mode: 'fade',
+		auto: true,
+		autoControls: true,
+		stopAutoOnClick: false,
+		speed: 800, 
+		pager: true,
+		touchEnabled: true,		
+		pause: 8000
+	});
+});
+
+
+
+<?
+$v = @$_GET['view'];
+if($v == 'dev'){
+
+//http://igcert.net/?view=dev
+?>
+
+const certProxt = {
+	data:'',
+	getData:()=>{
+		let cert_code = $('#cert_code').val();
+		if(cert_code === ''){
+			$('#cert_rst').html('<p>올바른 검색어를 입력해주세요.</p>');
+			return false;
+		}
+
+		$('#cert_rst').html('<p>검색중...</p>');
+		$.get('/lib/certProxy/search.php',{'code':cert_code},(r)=>{
+			console.log(r);
+			if(r === '') r = '<p>조회결과가 없습니다.</p>';
+			$('#cert_rst').hide().html(r).fadeIn(1500);
+		});
+	}
+}
+
+$('#cert_btn').click(certProxt.getData);
+
+
+
+<?
+}
+
+?>
+
+
+
+
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+	
+});
+</script>
+
+<?php
+include_once(G5_THEME_PATH.'/tail.php');
+?>
